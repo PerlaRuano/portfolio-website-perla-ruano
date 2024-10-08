@@ -15,7 +15,7 @@
     <main>
       <!-- About Me Section -->
       <section id="about">
-        <img src="./assets/your-image.jpg" alt="Your Name" class="profile-img" />
+        <img src="perla.jpg" alt="Your Name" class="profile-img" />
         <h1>Perla Ruano</h1>
         <p>A dedicated mother of three, I'm pursuing a Bachelor's in Computer Science to provide a bright future for my family. My passion for technology, coupled with my
           entrepreneurial spirit, drives me towards a career in IT that offers flexibility. Having lived in Oregon, Arizona, and Nebraska, I bring a diverse perspective to my 
