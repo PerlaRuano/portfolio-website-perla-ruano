@@ -60,6 +60,12 @@ export default {
 
 <style scoped>
 /* Global styles can go here, or you can use separate CSS/SCSS files */
+/* Global Flexbox Layout */
+  #app {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
 /* Header Styling */
 header {
