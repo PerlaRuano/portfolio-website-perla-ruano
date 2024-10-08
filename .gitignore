@@ -8,19 +8,30 @@ node_modules
 .env.*.local
 
 # Log files
+<<<<<<< HEAD
 *.log
+=======
+>>>>>>> 0c1f4ee35be882f2b738a26563a52da181d9650c
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
 # Editor directories and files
+<<<<<<< HEAD
 .vscode
 ! .vscode/extensions.json
 .idea
+=======
+.idea
+.vscode
+>>>>>>> 0c1f4ee35be882f2b738a26563a52da181d9650c
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 *.tsbuildinfo
+=======
+>>>>>>> 0c1f4ee35be882f2b738a26563a52da181d9650c
