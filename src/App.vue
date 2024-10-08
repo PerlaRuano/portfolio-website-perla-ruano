@@ -35,7 +35,7 @@
 
     <!-- Footer Section -->
     <footer>
-      <p>Connect with me on <a href="https://github.com/yourgithub">GitHub</a></p>
+      <p>Connect with me on <a href="https://github.com/PerlaRuano/portfolio-website-perla-ruano">GitHub</a></p>
     </footer>
   </div>
 </template>
