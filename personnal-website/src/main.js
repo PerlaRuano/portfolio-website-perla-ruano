@@ -10,7 +10,7 @@ Vue.config.productionTip = false;
 
 new Vue({
   render: h => h(App),
-  router  // Include the router here
+  router  // Include the router to the Vue instance
 }).$mount('#app');
 
 
