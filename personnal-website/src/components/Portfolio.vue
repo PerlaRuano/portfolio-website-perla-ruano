@@ -31,7 +31,7 @@
     methods: {
       async fetchRepositories() {
         try {
-          const response = await axios.get('https://api.github.com/users/{your-github-username}/repos');
+          const response = await axios.get('https://github.com/PerlaRuano/portfolio-website-perla-ruano.git');
           this.repositories = response.data;
         } catch (err) {
           this.error = 'Failed to load repositories. Please try again later.';
