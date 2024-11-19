@@ -1,9 +1,20 @@
 <template>
+   <div id="app">
+    <router-view></router-view> <!-- Route display point -->
+  </div>
+</template>
+
+
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
 </template>
 
 <script>
+export default {
+  name: 'App'
+};
+
+
 import HelloWorld from './components/HelloWorld.vue'
 
 export default {
