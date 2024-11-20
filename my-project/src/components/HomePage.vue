@@ -1,24 +1,21 @@
 
 <template>
     <div class="main-container">
-      <div class="profile"></div>
+      <div class="profile">
         <img src="./assets/profile.png" alt=""/>
          <h3>Perla Ruano</h3>
           <p>Software Developer</p>
       </div>
+    </div>
       <div class="social links">
-        <a href="">
-          <div class="link">
+          <div class="links">
             <img src="./assets/github.png" alt="">
-            <h2>Github</h2>
+            <a href=""><h2>Github</h2></a>
           </div>
           <div class="link">
             <img src="./assets/linkedin.png" alt="">
-            <h2>LinkedIn</h2> 
+            <a href=""><h2>LinkedIn</h2></a> 
           </div> 
-
-        </a>
-
       </div>
       <div class="container-two">
         <div class="about me">
@@ -46,21 +43,49 @@
           <li>Networking: Understanding of networking protocols (e.g., TCP/IP, HTTP).</li>
         </ul>
       </div>
+      <div class="button-container">
+        <div class="My Projects">
+          <a href="">My Projects</a>
+        </div>
+        <div>
+          <a href="">My Resume</a>
+        </div>
       </div>
+    </div>
   </template>
   
   <script>
   export default {
-    name: 'HomePage'
-  };
+    
+  }
   </script>
   
   <style scoped>
+    img{
+      height: 20px;
+    }
+    
+    .main-container{
+      display: flex;
+      flex-direction: row;
+      background-color: #cecece;
+    }
 
-  .home {
-    text-align: center;
-    padding: 20px;
-  }
+    .container-one{
+      background-color: #ffb0b0;
+      padding: 2.5%;
+      width: 30%;
+    }
+
+    .profile-image{
+      height: 5rem;
+      border-radius: 50%;
+    }
+
+    .container-two{
+      background-color: aquamarine;
+      width: 70%;
+    }
   
   .profile-image {
     width: 150px;
