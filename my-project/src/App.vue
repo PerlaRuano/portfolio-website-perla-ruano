@@ -1,15 +1,18 @@
 <template>
   <img alt="Vue logo" src="./assets/logo.png">
   <HomePage/>
+  <PortfolioPage/>
 </template>
 
 <script>
 import HomePage from './components/HomePage.vue'
+import PortfolioPage from './components/PortfolioPage.vue';
 
 export default {
   name: 'App',
   components: {
-    HomePage
+    HomePage,
+    PortfolioPage
   }
 }
 </script>
