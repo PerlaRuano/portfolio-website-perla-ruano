@@ -3,7 +3,7 @@
     <div class="home">
       <h1>Welcome to My Professional Website!</h1>
       <p>I am a budding web developer passionate about coding and creating innovative solutions. Stay tuned for more content!</p>
-      <img src="perla.jpg" alt="Your Professional Photo" class="profile-image" />
+      <img src="picture_profile.jpg" alt="Your Professional Photo" class="profile-image" />
     </div>
   </template>
   
