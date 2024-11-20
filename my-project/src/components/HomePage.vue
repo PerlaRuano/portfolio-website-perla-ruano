@@ -1,5 +1,6 @@
 
 <template>
+<div class="wrapper">
     <div class="main-container">
       <div class="profile">
         <img src="./assets/profile.png" alt=""/>
@@ -56,6 +57,7 @@
         </div>
       </div>
     </div>
+</div>
   </template>
   
   <script>
@@ -65,6 +67,10 @@
   </script>
   
   <style scoped>
+    .wrapped{
+      display: flex;
+      justify-content: center;
+    }
     img{
       height: 20px;
     }
@@ -74,6 +80,7 @@
       flex-direction: row;
       background-color: #cecece;
       border-radius: 25px;
+      width: 60%;
     }
 
     .container-one{

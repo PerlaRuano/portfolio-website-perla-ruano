@@ -1,17 +1,11 @@
 <template>
-    <div class="portfolio">
-      <h1>My GitHub Portfolio</h1>
-      <div v-if="loading" class="loading">Loading...</div>
-      <div v-else-if="error" class="error">{{ error }}</div>
-      <ul v-else>
-        <li v-for="repo in repositories" :key="repo.id">
-          <a :href="repo.html_url" target="_blank">{{ repo.name }}</a>
-          <p>{{ repo.description || 'No description available' }}</p>
-          <p><strong>Language:</strong> {{ repo.language }}</p>
-          <p><strong>Last Updated:</strong> {{ formatDate(repo.updated_at) }}</p>
-        </li>
-      </ul>
+<div class="main-container">
+    <div class="project-one" v-for="(items, index) in projectData.ProjectArray">
+      <h2>{{projectData.ProjectArray[index].Title}}</h2>
+      <img :src="projectData.ProjectArray[index].Image" alt="">
+      <p>{{projectData.ProjectArray[index].About}}</p>
     </div>
+</div>
   </template>
   
   <script>
@@ -20,10 +14,7 @@
   export default {
     data() {
       return {
-        projectData: jsonData,
-        repositories: [],
-        loading: true,
-        error: null
+        projectData: jsonData
       };
     },
     created() {
@@ -49,6 +40,25 @@
   </script>
   
   <style scoped>
+
+  .main-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .project-one{
+    margin: 10px;
+    padding: 10px;
+    flex-wrap: 0 0 40%;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+  }
+
+  .project-one image{
+    height: 10rem;
+  }
   .portfolio {
     padding: 20px;
   }
