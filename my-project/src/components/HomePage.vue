@@ -9,12 +9,16 @@
     </div>
       <div class="social links">
           <div class="links">
+            <a href="">
             <img src="./assets/github.png" alt="">
-            <a href=""><h2>Github</h2></a>
+            <h2>Github</h2>
+            </a>
           </div>
           <div class="link">
+            <a href="">
             <img src="./assets/linkedin.png" alt="">
-            <a href=""><h2>LinkedIn</h2></a> 
+            <h2>LinkedIn</h2>
+            </a> 
           </div> 
       </div>
       <div class="container-two">
@@ -44,10 +48,10 @@
         </ul>
       </div>
       <div class="button-container">
-        <div class="My Projects">
+        <div class="projects-button">
           <a href="">My Projects</a>
         </div>
-        <div>
+        <div class="project-button">
           <a href="">My Resume</a>
         </div>
       </div>
@@ -69,12 +73,14 @@
       display: flex;
       flex-direction: row;
       background-color: #cecece;
+      border-radius: 25px;
     }
 
     .container-one{
       background-color: #ffb0b0;
       padding: 2.5%;
       width: 30%;
+      border-radius: 25px;
     }
 
     .profile-image{
@@ -82,17 +88,49 @@
       border-radius: 50%;
     }
 
+    .link a{
+      text-decoration: none;
+      color: #2c3e50;
+      font-size: 10px;
+    }
+
+    .link img{
+      height: 2rem;
+    }
+
     .container-two{
       background-color: aquamarine;
+      margin: 2.5%;
       width: 70%;
     }
   
-  .profile-image {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-top: 20px;
-  }
+    .about-me{
+      text-align: left;
+    }
+
+    .logos img{
+      height: 2.5rem;
+    }
+
+    .button-container{
+      margin-top: 5%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .project-button{
+      background-color: #7c58ff;
+      border-radius: 15px;
+      padding: 5px;
+      margin: 5px;
+    }
+
+    .project-button a{
+      text-decoration: none;
+      color: #fff;
+    }
   </style>
   
   

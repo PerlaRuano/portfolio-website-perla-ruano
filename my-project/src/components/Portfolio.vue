@@ -15,11 +15,13 @@
   </template>
   
   <script>
+  import jsonData from "/projects.json"
   import axios from 'axios';
   
   export default {
     data() {
       return {
+        projectData: jsonData,
         repositories: [],
         loading: true,
         error: null
