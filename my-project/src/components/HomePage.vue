@@ -81,10 +81,11 @@
       background-color: #cecece;
       border-radius: 25px;
       width: 60%;
+      background-color: #A0D4FF;
     }
 
     .container-one{
-      background-color: #ffb0b0;
+      background-color: #1292EE;
       padding: 2.5%;
       width: 30%;
       border-radius: 25px;
@@ -106,7 +107,6 @@
     }
 
     .container-two{
-      background-color: aquamarine;
       margin: 2.5%;
       width: 70%;
     }
@@ -128,7 +128,7 @@
     }
 
     .project-button{
-      background-color: #7c58ff;
+      background-color: #005ca4;
       border-radius: 15px;
       padding: 5px;
       margin: 5px;

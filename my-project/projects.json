@@ -4,7 +4,7 @@
         "id" : 1,
         "Title" : "Calculator",
         "About" : "A simple Calculator in Vue",
-        "Image" : "data:image/jpeg;",
+        "Image" : ".assets/calculator.png",
         "Link" : ""
     }
 ]

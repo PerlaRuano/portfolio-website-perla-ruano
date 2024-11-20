@@ -4,6 +4,10 @@
       <h2>{{projectData.ProjectArray[index].Title}}</h2>
       <img :src="projectData.ProjectArray[index].Image" alt="">
       <p>{{projectData.ProjectArray[index].About}}</p>
+      <div class="links" >
+        <a href=""><img src="./assets/github.png" alt=""></a>
+        <a href=""><img src="./assets/link.png" alt=""></a>
+      </div>
     </div>
 </div>
   </template>
@@ -42,10 +46,12 @@
   <style scoped>
 
   .main-container{
+    margin: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    background-color: #A0D4ff;
   }
   .project-one{
     margin: 10px;
@@ -59,32 +65,22 @@
   .project-one image{
     height: 10rem;
   }
+
+  .links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .links img{
+    height: 1.5rem;
+    margin: 5px;
+  }
   .portfolio {
     padding: 20px;
   }
-  .loading {
-    font-size: 1.5em;
-  }
-  .error {
-    color: red;
-    font-size: 1.2em;
-  }
-  ul {
-    list-style-type: none;
-    padding: 0;
-  }
-  li {
-    margin-bottom: 20px;
-  }
-  a {
-    font-weight: bold;
-    font-size: 1.2em;
-    text-decoration: none;
-    color: #333;
-  }
-  a:hover {
-    text-decoration: underline;
-  }
+
   </style>
   
   
