@@ -16,7 +16,6 @@
   
   <script>
   import jsonData from "/projects.json"
-  import axios from 'axios';
   
   export default {
     data() {
