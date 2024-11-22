@@ -55,4 +55,41 @@ li {
 a {
   color: #42b983;
 }
+.main-container{
+    margin: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: #A0D4ff;
+  }
+  .project-one{
+    margin: 10px;
+    padding: 10px;
+    flex-wrap: 0 0 40%;
+    background-color: #fff;
+    border-radius: 25px;
+    box-shadow: rgba(0,0,0,0.24) 0px 3px 8px;
+  }
+
+  .project-one image{
+    height: 10rem;
+  }
+
+  .links{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .links img{
+    height: 1.5rem;
+    margin: 5px;
+  }
+  .portfolio {
+    padding: 20px;
+  }
+  
+  
 </style>
