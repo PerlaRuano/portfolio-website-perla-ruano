@@ -1,47 +1,56 @@
 <template>
-    <div class="main-container">
-        <div class="project-one" v-for="(items, index) in projectData.ProjectArray">
-          <h2>{{projectData.ProjectArray[index].Title}}</h2>
-          <img :src="projectData.ProjectArray[index].Image" alt="">
-          <p>{{projectData.ProjectArray[index].About}}</p>
-          <div class="links" >
-            <a href=""><img src="./assets/github.png" alt=""></a>
-            <a href=""><img src="./assets/link.png" alt=""></a>
-          </div>
-        </div>
+    <div class="portfolio">
+      <h2>My GitHub Repositories</h2>
+      <p v-if="loading">Loading...</p>
+      <p v-if="error" class="error">{{ error }}</p>
+      <ul v-if="repositories.length > 0">
+        <li v-for="repo in repositories" :key="repo.id" class="repo-item">
+          <a :href="repo.html_url" target="_blank">{{ repo.name }}</a>
+          <p>{{ repo.description || 'No description available' }}</p>
+          <p><strong>Language:</strong> {{ repo.language || 'N/A' }}</p>
+          <p><strong>Last updated:</strong> {{ formatDate(repo.updated_at) }}</p>
+        </li>
+      </ul>
+      <p v-else>No repositories found.</p>
     </div>
-      </template>
-      
-      <script>
-      import jsonData from "/projects.json"
-      
-      export default {
-        data() {
-          return {
-            projectData: jsonData
-          };
-        },
-        created() {
-          this.fetchRepositories();
-        },
-        methods: {
-          async fetchRepositories() {
-            try {
-              const response = await axios.get('https://github.com/PerlaRuano/portfolio-website-perla-ruano.git');
-              this.repositories = response.data;
-            } catch (err) {
-              this.error = 'Failed to load repositories. Please try again later.';
-            } finally {
-              this.loading = false;
-            }
-          },
-          formatDate(date) {
-            const options = { year: 'numeric', month: 'long', day: 'numeric' };
-            return new Date(date).toLocaleDateString(undefined, options);
-          }
-        }
+  </template>
+  
+  <script>
+  import axios from 'axios';
+  
+  export default {
+    name: 'Portfolio',
+    data() {
+      return {
+        repositories: [],
+        loading: true,
+        error: '',
       };
-      </script>
+    },
+    mounted() {
+      this.fetchRepositories();
+    },
+    methods: {
+      async fetchRepositories() {
+        try {
+          const response = await axios.get(
+            'https://api.github.com/users/{your-github-username}/repos'
+          );
+          this.repositories = response.data;
+        } catch (error) {
+          this.error = 'Failed to load repositories. Please try again later.';
+        } finally {
+          this.loading = false;
+        }
+      },
+      formatDate(date) {
+        const options = { year: 'numeric', month: 'short', day: 'numeric' };
+        return new Date(date).toLocaleDateString(undefined, options);
+      },
+    },
+  };
+  </script>
+  
       
       <style scoped>
     
@@ -80,6 +89,37 @@
       .portfolio {
         padding: 20px;
       }
+
+      h2 {
+  text-align: center;
+}
+
+.repo-item {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.repo-item a {
+  font-weight: bold;
+  color: #002f6c;
+  text-decoration: none;
+}
+
+.repo-item a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: red;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .portfolio {
+    padding: 15px;
+  }
+}
+
     
       </style>
       
