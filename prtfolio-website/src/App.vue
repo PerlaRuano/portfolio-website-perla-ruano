@@ -1,5 +1,4 @@
 <template>
-  <template>
   <div id="app">
     <header>
       <h1>My Developer Portfolio</h1>
